@@ -12,10 +12,10 @@ In order to answer the key business questions, I will follow the steps of the da
 Data Source: [divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html) [accessed on 05/07/26]
 
 SQL Queries:  
-[01. Data Combining]
-[02. Data Exploration]
-[03. Data Cleaning]
-[04. Data Analysis]
+[01. Data Combining](https://github.com/randymramli/Cyclicist/blob/main/01.Data_Combining.sql)
+[02. Data Exploration](https://github.com/randymramli/Cyclicist/blob/main/02.Data_Exploration.sql)
+[03. Data Cleaning](https://github.com/randymramli/Cyclicist/blob/main/03.Data_Cleaning.sql)
+[04. Data Analysis](https://github.com/randymramli/Cyclicist/blob/main/04.Data_Analysis.sql)
 
 Data Visualizations: [Tableau]
 
@@ -63,7 +63,7 @@ This is public data that can be used to explore how different customer types are
 
 ### Data Organization
 
-There are 12 files with naming convention of YYYYMM-divvy-tripdata and each file includes information for one month, such as the ride id, bike type, start time, end time, start station, end station, start location, end location, and whether the rider is a member or not. The corresponding column names are ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng and member_casual.
+There are 12 files with naming convention of YYYYMM-divvy-tripdata and each file includes information for one month, such as the ride id, bike type, start time, end time, start station, end station, start location, end location, and whether the rider is a member or not. The corresponding column names are ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng and member_casual. There are 5850257 rows.
 
 ## Process
 
@@ -73,10 +73,24 @@ A worksheet can only have 1,048,576 rows in Microsoft Excel because of its inabi
 
 ### Combining the Data
 
-SQL Query: [Data Combining]
+SQL Query: [Data Combining](https://github.com/randymramli/Cyclicist/blob/main/01.Data_Combining.sql)
 12 csv files are uploaded as tables in the dataset 'Merged_data'.
 
 ### Data Exploration
 
-SQL Query: [Data Exploration]
-Before cleaning the data, I am familiarizing myself with the data to find the inconsistencies.
+SQL Query: [Data Exploration](https://github.com/randymramli/Cyclicist/blob/main/02.Data_Exploration.sql)
+Before cleaning the data, I am familiarizing myself with the data to understand it better.
+
+1. The table below shows all the column names, with ride_id as the primary key
+   ![image](pic/data-type.png)
+
+2. We then further check if there are any duplicates in the data, and we have found there are 298155 duplicate data. We then remove them.
+
+3. Table below shows how many null values there are in each column
+   ![image](pic/null_values.png)
+
+4. Based on the data, we know that there are 2 types of bikes: electric and classic. This table shows how many there are for each type.
+   ![image](pic/bike_types.png)
+
+5. This table below show the count for each user type available in the dataset
+   ![image](pic/member_merged.png)
