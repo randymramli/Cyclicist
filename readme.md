@@ -94,3 +94,18 @@ Before cleaning the data, I am familiarizing myself with the data to understand 
 
 5. This table below show the count for each user type available in the dataset
    ![image](pic/member_merged.png)
+
+### Data Cleaning
+
+SQL Query: [Data Cleaning](https://github.com/randymramli/Cyclicist/blob/main/03.Data_Cleaning.sql)
+
+1. Since start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng are not necessary for our analysis,
+   I have decided to remove those columns from the table. I am keeping ride_id, rideable_type, started_at, ended_at, start_station_name, and member_casual.
+
+2. Based on the started_at and ended_at column, I notice that there are several instances where the length of the trip exceeds 1 day. As consider it unlikely for
+   anyone to ride a bike for one full day, I have decided to remove the top 1% outlier of the data, based on how long the trip is, removing a total of 60685 rows of data. I also categorize each trip according to the trip length.
+
+3. Since all the null values exists only in the columns removed, no more reduction were done.
+
+4. Columns added are: start_year, start_month, start_day, duration_second, duration_minute, duration_category.
+   ![image](pic/clean_data.png)
