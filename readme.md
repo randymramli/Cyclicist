@@ -82,17 +82,21 @@ SQL Query: [Data Exploration](https://github.com/randymramli/Cyclicist/blob/main
 Before cleaning the data, I am familiarizing myself with the data to understand it better.
 
 1. The table below shows all the column names, with ride_id as the primary key
+
    ![image](pic/data-type.png)
 
 2. We then further check if there are any duplicates in the data, and we have found there are 298155 duplicate data. We then remove them.
 
 3. Table below shows how many null values there are in each column
+
    ![image](pic/null_values.png)
 
 4. Based on the data, we know that there are 2 types of bikes: electric and classic. This table shows how many there are for each type.
+
    ![image](pic/bike_types.png)
 
 5. This table below show the count for each user type available in the dataset
+
    ![image](pic/member_merged.png)
 
 ### Data Cleaning
@@ -108,4 +112,40 @@ SQL Query: [Data Cleaning](https://github.com/randymramli/Cyclicist/blob/main/03
 3. Since all the null values exists only in the columns removed, no more reduction were done.
 
 4. Columns added are: start_year, start_month, start_day, duration_second, duration_minute, duration_category.
+
    ![image](pic/clean_data.png)
+
+### Data Analysys
+
+SQL Query: [Data Analysis](https://github.com/randymramli/Cyclicist/blob/main/04.Data_Analysis.sql)
+
+1. Graph below shows the average trip per month and the average minute per trip, categorized by member type. As we can see, casual members take more trip compared to annual members.
+   The graph also show increase in the spring to summer months, with the decline of bike usage going to colder winter months
+
+   ![image](pic/avg_trip_per_month.png)
+
+   ![image](pic/avg_min_per_trip_month.png)
+
+2. Graph below shows average trip per day, categorized by member type. As we can see from the graph, while there are more casual members, the casual members use of the bikes increse on the weekends, while the annual members have a more steadier use of the bikes.
+
+   ![image](pic/day_use.png)
+
+   ![image](pic/avg_day_use.png)
+
+3. Graph below shows a breakdown of bike used, grouped by the hours and membership types. Annual members use of the bikes increases during commuting hours, especially at the end of working days, dropping between those two times and after. Casual members has a steady increse towards the 5-6 pm time slot, decreasing after.
+
+   ![image](pic/total_minutes_use_per_day.png)
+
+## Summary
+
+1. Casual members have a more leisure attitude towards the use of the bikes, focusing on the end of day time slot, and weekend.
+2. Annual members have a more steady use of the bikes, but focuses in the morning before work and after work time slot.
+3. Usage of both members have a gradual increase from spring to summer time, decreasing during fall and winter time, due to the cold weather.
+
+## Proposal
+
+1. As we see from the graph, casual members tend to use the bike on the weekend. This can be the main entry point to encourage them towards annual membership. We can propose a weekend discount for a short period of time, and then offer them annual membership.
+
+2. The graph also shows an increase of bike use in summer. We can use that as a chance to offer summer exclusive membership deal for casual riders.
+
+3. Providing positive encouragement is also important. We can show how much people save from using the bikes instead of using personal vehicle or public transport, and highlight the health benefit of frequent bike usage.
