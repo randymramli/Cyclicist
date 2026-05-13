@@ -5,7 +5,7 @@ Course: [Google Data Analytics Capstone: Complete a Case Study](https://www.cour
 ## Introduction
 
 In this case study, I will be assuming the role of a junior data analyst at Cyclistic, a bike sharing company.
-In order to answer the key business questions, I will follow the steps of the data analysis process: [Ask], [Prepare], [Process], [Analyze], [Share], and [Act].
+In order to answer the key business questions, I will follow the steps of the data analysis process: [Ask](https://github.com/randymramli/Cyclicist/blob/main/readme.md#Ask), [Prepare](https://github.com/randymramli/Cyclicist/blob/main/readme.md#Prepare), [Process](https://github.com/randymramli/Cyclicist/blob/main/readme.md#Process), [Analyze](https://github.com/randymramli/Cyclicist/blob/main/readme.md#Analyze), [Share](https://github.com/randymramli/Cyclicist/blob/main/readme.md#Summary), and [Act](https://github.com/randymramli/Cyclicist/blob/main/readme.md#Proposal).
 
 ### Quick links:
 
@@ -13,8 +13,11 @@ Data Source: [divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html
 
 SQL Queries:  
 [01. Data Combining](https://github.com/randymramli/Cyclicist/blob/main/01.Data_Combining.sql)
+
 [02. Data Exploration](https://github.com/randymramli/Cyclicist/blob/main/02.Data_Exploration.sql)
+
 [03. Data Cleaning](https://github.com/randymramli/Cyclicist/blob/main/03.Data_Cleaning.sql)
+
 [04. Data Analysis](https://github.com/randymramli/Cyclicist/blob/main/04.Data_Analysis.sql)
 
 Data Visualizations: [Tableau]
